@@ -1,6 +1,10 @@
-# README for Assembly Language Programs
-## Compilation and Execution Guide for Assembly Programs
-1. **Install Necessary Tools**:
+# Assembly Language Programs
+## Instructions for Compiling and Running
+### Prerequisites
+1. **Assembler** - NASM (Netwide Assembler) for compiling assembly code.
+2. **Linker** - LD (GNU linker) for linking object files to create the executable
+### Compilation and Execution:
+1. **Install Necessary Tools**
 ```bash
 sudo apt update
 sudo apt install nasm      
@@ -31,22 +35,17 @@ ld -m elf_i386 -o output_program output_file.o
 This program is designed to prompt the user to input a number and classify it as either "POSITIVE", "NEGATIVE", or "ZERO" based on the entered value. The program makes use of assembly language concepts such as conditional and unconditional jumps to handle the different cases effectively.
 
 ### Program Breakdown
-- **Input Prompt**: The program prompts the user to enter a number.
+- **Input Prompt** - The program prompts the user to enter a number.
 
-- **Branching Logic**: The program uses conditional jumps to check if the number is positive, negative or zero.
+- **Branching Logic** - The program uses conditional jumps to check if the number is positive, negative or zero.
 
-- **Classification**: Based on the comparison results, the program prints an appropriate message:
+- **Classification** - Based on the comparison results, the program prints an appropriate message:
 
 1. "The number is POSITIVE."
 
 2. "The number is NEGATIVE."
 
 3. "The number is ZERO."
-
-### Prerequisites
-- Assembler: NASM (Netwide Assembler) for compiling assembly code.
-
-- Linker: LD (GNU linker) for linking object files to create the executable.
 
 ### Insights and Challenges
 #### Key Concepts:
@@ -118,9 +117,9 @@ This program simulates a control system based on a water level sensor. The progr
    
 3. **Exit** - The program terminates after executing the actions.
 ### Example Outputs:
-- High water level (80): Motor OFF, Alarm ON.
-- Moderate water level (50): Motor OFF, Alarm OFF.
-- Low water level (20): Motor ON, Alarm OFF.
+- High water level (80) - Motor OFF, Alarm ON.
+- Moderate water level (50) - Motor OFF, Alarm OFF.
+- Low water level (20) - Motor ON, Alarm OFF.
 
 ### Stack and Memory Manipulation
 Registers and memory locations are used to simulate motor and alarm control actions based on sensor input. Each sensor reading triggers a corresponding system state.
