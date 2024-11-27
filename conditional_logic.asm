@@ -114,3 +114,7 @@ exit_program:
     mov eax, 1              ; syscall: exit
     xor ebx, ebx            ; status code 0
     int 0x80                ; call kernel
+
+; Why Jump Instructions Were Chosen:
+;1. Conditional Jumps- The conditional jumps (je, jg) are necessary for branching the program based on the comparison between the input number and zero. This allows the program to respond to different cases (positive, negative, or zero) without excessive use of if-else structures.
+;2. Unconditional Jumps - The unconditional jmp is used to exit the program or skip unnecessary code after a message is displayed. It ensures smooth program flow without unnecessary checks.
